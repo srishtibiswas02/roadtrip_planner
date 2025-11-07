@@ -1,0 +1,82 @@
+Roadtrip Planner – Documentation
+
+Overview
+--------
+A smart, India-specific road trip planning web application built with Python (Streamlit) and integrated with Google Maps, Places, Toll Data, and LLM APIs. The Roadtrip Planner app enables users to plan personalized road trips by car or bike, featuring optimized routes, smart rest and fuel stops, meal and hotel suggestions, real-time toll and fuel cost estimation, and intelligent time-based planning tailored to Indian roads and traveler preferences.
+
+Features
+--------
+- Interactive route planner with Google Maps
+- Vehicle and user profile management
+- Fuel cost estimation and refueling optimization
+- Time-aware smart stop planning (meals, rest, hotels)
+- Google Places API integration for restaurants, hotels, and fuel stations
+- LLM-enhanced suggestions for scenic routes, safety, and hidden gems
+- Toll cost estimation using APIs or LLM fallback
+- Responsive, mobile-friendly UI
+
+Setup
+-----
+1. Clone the repository:
+   git clone <repository-url>
+   cd Roadtrip_planner_V2
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Create a `.env` file in the root directory with your API keys:
+   GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   TOLLGURU_API_KEY=your_tollguru_api_key
+   GEMINI_API_KEY=your_gemini_api_key
+4. Run the application:
+   streamlit run app.py
+
+API Keys Required
+-----------------
+- Google Maps API Key (enable: Maps JavaScript, Directions, Places, Distance Matrix, Geocoding)
+- TollGuru API Key (for toll cost estimation)
+- Gemini API Key (for LLM-based suggestions)
+
+Directory Structure
+-------------------
+Roadtrip_planner_V2/
+├── app.py
+├── requirements.txt
+├── README.md
+├── documentation.txt
+├── utils/
+│   ├── maps.py
+│   ├── places.py
+│   ├── tolls.py
+│   ├── llm.py
+│   ├── fuel.py
+│   ├── profiles.py
+│   ├── schedule.py
+│   ├── auth.py
+│   ├── trip_planner.py
+│   └── __init__.py
+├── users/
+├── profiles/
+│   ├── vehicles/
+│   └── users/
+
+Usage
+-----
+1. Enter your starting point and destination.
+2. Select your vehicle type and profile.
+3. Set your preferred driving hours and meal times.
+4. Get your optimized route with:
+   - Distance and duration
+   - Fuel cost estimation
+   - Suggested stops for meals and rest
+   - Hotel recommendations for overnight stays
+   - Toll cost calculation
+
+Contribution Guidelines
+-----------------------
+- Fork the repository and create a new branch for your feature or bugfix.
+- Submit a pull request with a clear description of your changes.
+- Ensure your code follows PEP8 and is well-documented.
+
+Security & Privacy
+------------------
+- Do NOT commit your `.env` file or any files containing secrets or user data.
+- Use the provided `.gitignore` to avoid committing sensitive files.
